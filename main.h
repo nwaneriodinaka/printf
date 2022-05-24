@@ -11,5 +11,6 @@ int print_deci(int num);
 int print_sint(signed int num);
 int print_hexa(int num);
 int _printf(const char *format, ...);
+int print_char(char ctr);
 
 #endif
