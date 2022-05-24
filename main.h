@@ -1,5 +1,8 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef MAIN_H
+#define MAIN_H
+
+#include <stdio.h>
+#include <stdarg.h>
 
 int oogway(char c);
 int print_string(char *str);
