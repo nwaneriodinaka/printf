@@ -9,68 +9,30 @@ int _printf(const char *format, ...)
 
 	while (*(format + count))
 	{
-		if(format[count] == '%')
+		if (format[count] == '%')
 		{
 			count += 1;
 			switch (format[count])
 			{
 				case 's':
-				{
 					a += print_string(va_arg(ap, char *));
 					break;
-				}
 				case 'c':
-				{
 					a += print_char(va_arg(ap, int));
 					break;
-				}
+				case 'i':
 				case 'd':
-				{
-					a += print_sint(va_arg(ap, int));
+					a += print_number(va_arg(ap, int));
 					break;
-				}
 				case '%':
 				{
 					oogway('%');
 					++a;
 					break;
 				}
-				case 'x':
-				{
+				/*case 'x':
 					a += print_hexa(va_arg(ap, int));
-					break;
-				}
-				case 'i':
-				{
-					a += print_int(va_arg(ap, int));
-					break;
-				}
-			}
-		}
-		else if (format[count] == '\\')
-		{
-			count += 1;
-			switch (format[count])
-			{
-				case 'n':
-				{
-					oogway('\n');
-					++a;
-					break;
-
-				}
-				case 't':
-				{
-					oogway('\t');
-					++a;
-					break;
-				}
-				case '0':
-				{
-					oogway('\0');
-					++a;
-					break;
-				}
+					break;*/
 			}
 		}
 		else
