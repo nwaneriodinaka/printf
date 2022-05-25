@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * _printf - output argument
+ * @format: format of output
+ * Return: length of string
+ */
+
 int _printf(const char *format, ...)
 {
 	va_list ap;
@@ -30,9 +36,6 @@ int _printf(const char *format, ...)
 					++a;
 					break;
 				}
-				/*case 'x':
-					a += print_hexa(va_arg(ap, int));
-					break;*/
 			}
 		}
 		else
@@ -42,7 +45,6 @@ int _printf(const char *format, ...)
 		}
 		count++;
 	}
-
 	va_end(ap);
 	return (a);
 }
