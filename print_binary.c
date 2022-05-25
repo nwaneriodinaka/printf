@@ -14,7 +14,7 @@ int print_binary(unsigned int num)
 	{
 		c = num % 2;
 		num /= 2;
-		a = print_int(num);
+		a = print_binary(num);
 		oogway(c + '0');
 		return (++a);
 	}
